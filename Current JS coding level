@@ -1,1 +1,42 @@
+// CALCULATOR (function manipulating)
 
+function Calculator() {
+  this.read = function() {
+    this.a = +prompt('a?', '');
+    this.b = +prompt('b?', '');
+  };
+  this.sum = function() {
+    return this.a + this.b;
+  };
+  this.mul = function() {
+    return this.a * this.b;
+  };
+}
+let calculator = new Calculator();
+calculator.read();
+alert( "Sum=" + calculator.sum() );
+
+
+
+// LADDER with (methods usage)
+
+let ladder = {
+    stair : 0,
+    climb () {
+        this.stair ++ ;
+        return this ;
+    },
+    jump () {
+        this.stair += 2 ;
+        return this ;
+    },
+    down () {
+        this.stair -= 4 ; 
+        return this ;
+    },
+    showStair () {
+        console.log (this.stair) ;
+        return this ; 
+    }
+    };
+ladder.climb().climb().jump().jump().down().showStair() ;
