@@ -40,3 +40,24 @@ let ladder = {
     }
     };
 ladder.climb().climb().jump().jump().down().showStair() ;
+
+
+
+// ELEVATOR 
+let a = +prompt("Which floor would you like?");
+
+if (a < 1 || a > 102) {
+    console.log("wrong floor");
+} else {
+    if ((a > 0 && a < 24) || a > 39) {
+        console.log("оk");
+    } else if (a > 23 || a < 40) {
+        let b = +prompt("Pasword please");
+
+        if (b == 1337) {
+            console.log("оk");
+        } else {
+            console.log("wrong password");
+        }
+    }
+}
